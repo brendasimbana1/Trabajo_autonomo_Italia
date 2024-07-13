@@ -1,0 +1,16 @@
+.activo {
+    background-color: #ccc;
+    }
+.activo a {
+    color: green;
+}
+
+nav a{
+    transition: 0.3s ease-in;
+    color: #090C5C;
+}
+nav a:hover{
+    color:rgb(42, 113, 131);
+    transform: scale(1.2);
+    cursor: pointer;
+}
