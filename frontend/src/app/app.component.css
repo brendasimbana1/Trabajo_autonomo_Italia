@@ -18,3 +18,9 @@
     position: relative;
     z-index: 1;
   }
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  

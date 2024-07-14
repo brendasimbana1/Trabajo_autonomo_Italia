@@ -1,0 +1,12 @@
+.custom-carousel {
+    max-width: 600px;
+    max-height: 400px;
+    margin: auto;
+  }
+  
+  .custom-carousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Asegura que las imágenes no excedan la altura del contenedor */
+  }
+  

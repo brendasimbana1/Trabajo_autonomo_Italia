@@ -1,0 +1,143 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4">¿Qué tanto sabes de Italia?</h1>
+          <p class="lead">Descúbrelo hoy.</p>
+        </div>
+      </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Cuestionario sobre Italia</h5>
+        <form (ngSubmit)="submitQuiz()" #cuestionario="ngForm">
+            <div class="form-group">
+                <label for="nombre" style="font-weight: 500;">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required [(ngModel)]="user.nombre" #nombre="ngModel">
+            </div>
+            <div class="alert alert-danger mt-2" [hidden]="nombre.valid || nombre.pristine">
+                El nombre es obligatorio.
+            </div>
+
+          <div class="form-group">
+            <label for="q1" style="font-weight: 500;">1. ¿Cuál fue el período de esplendor cultural y artístico en Italia durante el siglo XV y XVI?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1a" value="Renacimiento">
+                <label class="form-check-label" for="q1a">
+                  Renacimiento
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1b" value="Barroco">
+                <label class="form-check-label" for="q1b">
+                  Barroco
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1c" value="Neoclasicismo">
+                <label class="form-check-label" for="q1c">
+                  Neoclasicismo
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="q2" style="font-weight: 500;">2. ¿Qué ciudad italiana es conocida por ser el hogar del Vaticano y la Iglesia Católica?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2a" value="Florencia">
+                <label class="form-check-label" for="q2a">
+                  Florencia
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2b" value="Roma">
+                <label class="form-check-label" for="q2b">
+                  Roma
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2c" value="Venecia">
+                <label class="form-check-label" for="q2c">
+                  Venecia
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="q3" style="font-weight: 500;">3. ¿Qué famoso evento italiano tiene lugar en febrero y es conocido por sus máscaras y disfraces?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3a" value="Carnevale di Venezia">
+                <label class="form-check-label" for="q3a">
+                  Carnevale di Venezia
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3b" value="Festival de Cannes">
+                <label class="form-check-label" for="q3b">
+                  Festival de Cannes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3c" value="Fiesta de la Paloma">
+                <label class="form-check-label" for="q3c">
+                  Fiesta de la Paloma
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="q4" style="font-weight: 500;">4. ¿Qué ciudad italiana es famosa por su coliseo y por haber sido el centro del Imperio Romano?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4a" value="Roma">
+                <label class="form-check-label" for="q4a">
+                  Roma
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4b" value="Nápoles">
+                <label class="form-check-label" for="q4b">
+                  Nápoles
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4c" value="Florencia">
+                <label class="form-check-label" for="q4c">
+                  Florencia
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="q5" style="font-weight: 500;">5. ¿Cuál es uno de los platos más emblemáticos de la cocina italiana, que consiste arroz cremoso cocinado lentamente con caldo?</label>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5a" value="Pizza">
+                <label class="form-check-label" for="q5a">
+                  Pizza
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5b" value="Lasagna">
+                <label class="form-check-label" for="q5b">
+                  Lasagna
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5c" value="Risotto">
+                <label class="form-check-label" for="q5c">
+                  Risotto
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" [disabled]="cuestionario.invalid">Enviar Respuestas</button>
+        </form>
+      </div>
+    </div>
